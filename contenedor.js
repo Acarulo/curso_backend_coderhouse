@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-class Contenedor {
+module.exports = class Contenedor {
 
     constructor(archivo) {
         this.archivo = archivo;
@@ -70,6 +70,7 @@ class Contenedor {
     }
 }
 
+/*
 const productos = new Contenedor("productos.txt");
 
 const productoUno = {titulo: "VW Gol", precio: 2000000, imagen: "https://upload.wikimedia.org/wikipedia/commons/6/69/Volkswagen_Gol_Hatchback_--_Front.JPG"}
@@ -81,7 +82,7 @@ async function main() {
     await productos.save(productoUno);
     await productos.save(productoDos);
     await productos.save(productoTres);
-
+    
     console.log("New id is:", productos.id);
 
     console.log(await productos.getAll());
@@ -92,7 +93,8 @@ async function main() {
 
     await productos.deleteAll();
     console.log(await productos.getAll());
+    
 }
 
-main();
-
+//main();
+*/
