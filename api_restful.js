@@ -77,7 +77,6 @@ router.delete("/:id", (request, response) => {
         productos = productos.filter(item => item != producto);
         response.json(producto);
     }
-    
 });
 
 app.get("/", (request, response) => {

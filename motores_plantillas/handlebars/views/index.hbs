@@ -1,0 +1,22 @@
+<h2>Tabla de autos</h2>
+{{#if length}}
+    <table>
+        <tr>
+            <th>Marca y modelo</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+        </tr>
+        {{#each productos}}
+            <tr>
+                <td>{{this.titulo}}</td>
+                <td>{{this.precio}}</td>
+                <td><img src={{this.imagen}} border="3" height="150" width="300"></img></td>
+            </tr>
+        {{/each}}
+    </table>
+{{else}}
+    <h3>No se han encontrado productos</h3>
+{{/if}}
+<form method="post">
+    <button type="submit">Volver al inicio</button>
+</form>
