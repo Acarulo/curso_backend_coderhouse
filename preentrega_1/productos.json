@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1665625851000,
+    "nombre": "Smart TV Samsung X013000",
+    "descripcion": "Televisor 42 pulgadas QLED",
+    "codigo": "1A4O0",
+    "foto": "",
+    "precio": 120000,
+    "stock": 5
+  },
+  {
+    "id": 2,
+    "timestamp": 1665625851000,
+    "nombre": "Motorola Edge 30",
+    "descripcion": "Celular 128GB memoria, gris",
+    "codigo": "A4287BV",
+    "foto": "",
+    "precio": 80000,
+    "stock": 5
+  },
+  {
+    "id": 3,
+    "timestamp": 1665625851000,
+    "nombre": "Aire Acondicionado Philco",
+    "descripcion": "Frio/calor 3350W",
+    "codigo": "75VT3M",
+    "foto": "",
+    "precio": 115000,
+    "stock": 2
+  },
+  {
+    "id": 4,
+    "timestamp": 1665629882379,
+    "nombre": "Lavarropas Electrolux",
+    "descripcion": "Carga frontal 200kg",
+    "codigo": "EV12000A",
+    "foto": "",
+    "precio": 140000,
+    "stock": 3
+  }
+]
