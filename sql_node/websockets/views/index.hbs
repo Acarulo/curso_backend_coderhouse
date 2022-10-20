@@ -1,0 +1,41 @@
+<div>
+    <h1>Formulario de ingreso de productos</h1>
+    <form onsubmit="return addProduct(this)">
+        <label for="producto">Marca y modelo de auto:</label>
+        <input type="text" name="producto" id="producto" placeholder="Ingrese el producto"><br>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="precio" placeholder="Ingrese el precio"><br>
+        <label for="imagen">Imagen:</label>
+        <input type="url" name="imagen" id="imagen" placeholder="Ingrese URL de la imagen"><br>
+        <button>Ingresar producto</button>
+    </form>
+    <table>
+        {{#each productos}}
+            <tr>
+                <td>{{this.titulo}}</td>
+                <td>{{this.precio}}</td>
+                <td><img src={{this.imagen}} border="3" height="150" width="300"></img></td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+<div>
+    <h1>Centro de mensajes</h1>
+    <form onsubmit="return addMessage(this)">
+        <label for="email">Ingresa tu correo</label>
+        <input type="text" name="email" id="email" placeholder="juanruiz@gmail.com"><br>
+        <label for="mensaje">Ingresa tu mensaje</label>
+        <input type="text" name="mensaje" id="mensaje" placeholder="Quiero hablar de..."><br>
+        <button>Enviar</button>
+    </form>
+    <table>
+        {{#each mensajes}}
+            <tr>
+                <td style="color:blue"><strong>{{this.email}}</strong></td>
+                <td style="color:brown">{{this.time}}</td>
+                <td style="color:green"><i>{{this.mensaje}}</i></td>
+            </tr>
+        {{/each}}
+    </table>        
+</div>
+

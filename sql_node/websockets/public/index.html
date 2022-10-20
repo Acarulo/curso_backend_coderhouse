@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Websockets</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Formulario de ingreso de productos</h1>
+        <form onsubmit="return addProduct(this)">
+            <label for="producto">Marca y modelo de auto:</label>
+            <input type="text" name="producto" id="producto" placeholder="Ingrese el producto"><br>
+            <label for="precio">Precio:</label>
+            <input type="number" name="precio" id="precio" placeholder="Ingrese el precio"><br>
+            <label for="imagen">Imagen:</label>
+            <input type="url" name="imagen" id="imagen" placeholder="Ingrese URL de la imagen"><br>
+            <button>Ingresar producto</button>
+        </form>
+    </div>
+    <div id="products"></div>
+    <div>
+        <h1>Centro de mensajes</h1>
+        <form onsubmit="return addMessage(this)">
+            <label for="email">Ingresa tu correo</label>
+            <input type="text" name="email" id="email" placeholder="juanruiz@gmail.com"><br>
+            <label for="mensaje">Ingresa tu mensaje</label>
+            <input type="text" name="mensaje" id="mensaje" placeholder="Quiero hablar de..."><br>
+            <button>Enviar</button>
+        </form>
+        <div id="messagesList"></div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
