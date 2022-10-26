@@ -6,7 +6,7 @@ function renderProductos(arrayProductos) {
     const listaProds = arrayProductos.map((elem, index) => {
         return(
             `<div>
-                <strong>${elem.titulo}</strong>
+                <strong>${elem.marca}</strong>
                 <em>${elem.precio}</em>
                 <img src=${elem.imagen} border="3" height="150" width="300"></img>
             </div>
@@ -28,12 +28,12 @@ function renderMessages(arrayMessages) {
 
 function addProduct(item) {
     const product = {
-        titulo: document.getElementById("producto").value,
+        marca: document.getElementById("producto").value,
         precio: document.getElementById("precio").value,
         imagen: document.getElementById("imagen").value
     }
 
-    console.log(product.titulo);
+    console.log(product.marca);
     console.log(product.precio);
     console.log(product.imagen);
 

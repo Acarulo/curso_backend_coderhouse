@@ -30,12 +30,12 @@ function renderMessages(arrayMessages) {
 
 function addProduct(item) {
     const product = {
-        titulo: document.getElementById("producto").value,
+        marca: document.getElementById("producto").value,
         precio: document.getElementById("precio").value,
         imagen: document.getElementById("imagen").value
     }
 
-    console.log(product.titulo);
+    console.log(product.marca);
     console.log(product.precio);
     console.log(product.imagen);
 
