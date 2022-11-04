@@ -1,0 +1,32 @@
+Lista de comandos:
+
+1. Creación de colecciones:
+* use ecommerce
+* db.createCollection("productos")
+* db.createCollection("mensajes")
+
+2. Insersión de 10 documentos por colección (definir claves?)
+* db.productos.insertMany([{nombre: "Fiat 500", precio: 2200, anio: 2010}, {nombre: "Chevrolet Cruze", precio: 3500, anio: 2018}, {nombre: "VW Gol", precio: 900, anio: 2006}, {nombre: "Alpha Romeo Mito", precio: 4000, anio: 2022}, {nombre: "Ford Focus", precio: 2900, anio: 2017}, {nombre: "Ford Fiesta", precio: 1800, anio: 2019}, {nombre: "Citroen C3", precio: 1000, anio: 2016}, {nombre: "Peugeot 408", precio: 3000, anio: 2015}, {nombre: "VW Passat CC", precio: 4200, anio: 2020}, {nombre: "Nissan Sentra", precio: 2800, anio: 2021}])
+* db.mensajes.insertMany([{email: "augustocaro@gmail.com", mensaje: "Buen dia!", fecha: ISODate()}, {email: "mpic@gmail.com", mensaje: "Hola, cómo estan?", fecha: ISODate()}, {email: "fedeHernan22@gmail.com", mensaje: "Buenas foro, todo muy bien", fecha: ISODate()}, {email: "augustocaro@gmail.com", mensaje: "Estan interesados en el VW Gol?", fecha: ISODate()}, {email: "fedeHernan22@gmail.com", mensaje: "Si, muy lindo auto", fecha: ISODate()}, {email: "mpic@gmail.com", mensaje: "Me gusta pero muy caro", fecha: ISODate()}, {email: "augustocaro@gmail.com", mensaje: "Muy caro en serio?", fecha: ISODate()}, {email: "mpic@gmail.com", mensaje: "Si, para mi si", fecha: ISODate()}, {email: "fedeHernan22@gmail.com", mensaje: "Yo lo compro!", fecha: ISODate()}, {email: "augustocaro@gmail.com", mensaje: "Grande Fede!", fecha: ISODate()}])
+
+
+3. Listado de documentos en cada colección.
+* db.productos.find()
+* db.mensajes.find()
+
+4. Conteo de documentos almacenados en cada colección.
+* db.productos.estimatedDocumentCount()
+* db.mensajes.estimatedDocumentCount()
+
+5. Operaciones CRUD sobre colección de productos (en orden).
+* db.productos.insertOne({nombre: "Fiat Toro", precio: 2600, anio: 2014})
+* db.productos.find({"precio": {$lt: 1000}}, {"nombre": 1})
+* db.productos.find({$and: [{"precio": {$gt: 1000}}, {"precio": {$lt: 3000}}]}, {"nombre": 1})
+* db.productos.find({"precio": {$gt: 3000}}, {"nombre": 1})
+* db.productos.find({}, {"nombre": 1}).sort({"precio": 1}).skip(2).limit(1)
+* db.productos.updateMany({}, {$set: {"stock": 1000}})
+* db.productos.updateMany({"precio": {$gt: 4000}}, {$set: {"stock": 0}})
+* db.productos.deleteMany({"precio": {$lt: 1000}})
+
+6. Creación de usuario de sólo lectura.
+* db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
